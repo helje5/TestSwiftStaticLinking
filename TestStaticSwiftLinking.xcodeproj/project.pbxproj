@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E825824123CCB0BA0096AF1C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825824023CCB0BA0096AF1C /* main.swift */; };
+		E825825F23CCB2040096AF1C /* MyStaticLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825824F23CCB0EB0096AF1C /* MyStaticLib.swift */; };
+		E825826223CCB2660096AF1C /* libMyStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E825825B23CCB1FE0096AF1C /* libMyStaticLib.a */; };
+		E825826423CCB2C60096AF1C /* UsedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825826323CCB2C60096AF1C /* UsedClass.swift */; };
+		E825826623CCB2D40096AF1C /* UnusedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E825826523CCB2D40096AF1C /* UnusedClass.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E825826023CCB2610096AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E825823523CCB0BA0096AF1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E825825A23CCB1FE0096AF1C;
+			remoteInfo = MyStaticLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E825823B23CCB0BA0096AF1C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		E825823D23CCB0BA0096AF1C /* TestStaticSwiftLinking */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestStaticSwiftLinking; sourceTree = BUILT_PRODUCTS_DIR; };
+		E825824023CCB0BA0096AF1C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E825824F23CCB0EB0096AF1C /* MyStaticLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyStaticLib.swift; path = MyStaticLib/MyStaticLib.swift; sourceTree = "<group>"; };
+		E825825B23CCB1FE0096AF1C /* libMyStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMyStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E825826323CCB2C60096AF1C /* UsedClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UsedClass.swift; path = MyStaticLib/UsedClass.swift; sourceTree = "<group>"; };
+		E825826523CCB2D40096AF1C /* UnusedClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UnusedClass.swift; path = MyStaticLib/UnusedClass.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E825823A23CCB0BA0096AF1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E825826223CCB2660096AF1C /* libMyStaticLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E825825923CCB1FE0096AF1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E825823423CCB0BA0096AF1C = {
+			isa = PBXGroup;
+			children = (
+				E825825123CCB0F20096AF1C /* MyStaticLib */,
+				E825823F23CCB0BA0096AF1C /* TestStaticSwiftLinking */,
+				E825823E23CCB0BA0096AF1C /* Products */,
+				E825825523CCB1510096AF1C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E825823E23CCB0BA0096AF1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E825823D23CCB0BA0096AF1C /* TestStaticSwiftLinking */,
+				E825825B23CCB1FE0096AF1C /* libMyStaticLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E825823F23CCB0BA0096AF1C /* TestStaticSwiftLinking */ = {
+			isa = PBXGroup;
+			children = (
+				E825824023CCB0BA0096AF1C /* main.swift */,
+			);
+			path = TestStaticSwiftLinking;
+			sourceTree = "<group>";
+		};
+		E825825123CCB0F20096AF1C /* MyStaticLib */ = {
+			isa = PBXGroup;
+			children = (
+				E825824F23CCB0EB0096AF1C /* MyStaticLib.swift */,
+				E825826323CCB2C60096AF1C /* UsedClass.swift */,
+				E825826523CCB2D40096AF1C /* UnusedClass.swift */,
+			);
+			name = MyStaticLib;
+			sourceTree = "<group>";
+		};
+		E825825523CCB1510096AF1C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E825825723CCB1FE0096AF1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E825823C23CCB0BA0096AF1C /* TestStaticSwiftLinking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E825824423CCB0BA0096AF1C /* Build configuration list for PBXNativeTarget "TestStaticSwiftLinking" */;
+			buildPhases = (
+				E825823923CCB0BA0096AF1C /* Sources */,
+				E825823A23CCB0BA0096AF1C /* Frameworks */,
+				E825823B23CCB0BA0096AF1C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E825826123CCB2610096AF1C /* PBXTargetDependency */,
+			);
+			name = TestStaticSwiftLinking;
+			productName = TestStaticSwiftLinking;
+			productReference = E825823D23CCB0BA0096AF1C /* TestStaticSwiftLinking */;
+			productType = "com.apple.product-type.tool";
+		};
+		E825825A23CCB1FE0096AF1C /* MyStaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E825825C23CCB1FE0096AF1C /* Build configuration list for PBXNativeTarget "MyStaticLib" */;
+			buildPhases = (
+				E825825723CCB1FE0096AF1C /* Headers */,
+				E825825823CCB1FE0096AF1C /* Sources */,
+				E825825923CCB1FE0096AF1C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyStaticLib;
+			productName = MyStaticLib;
+			productReference = E825825B23CCB1FE0096AF1C /* libMyStaticLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E825823523CCB0BA0096AF1C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "ZeeZide GmbH";
+				TargetAttributes = {
+					E825823C23CCB0BA0096AF1C = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					E825825A23CCB1FE0096AF1C = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = E825823823CCB0BA0096AF1C /* Build configuration list for PBXProject "TestStaticSwiftLinking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E825823423CCB0BA0096AF1C;
+			productRefGroup = E825823E23CCB0BA0096AF1C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E825823C23CCB0BA0096AF1C /* TestStaticSwiftLinking */,
+				E825825A23CCB1FE0096AF1C /* MyStaticLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E825823923CCB0BA0096AF1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E825824123CCB0BA0096AF1C /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E825825823CCB1FE0096AF1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E825826623CCB2D40096AF1C /* UnusedClass.swift in Sources */,
+				E825825F23CCB2040096AF1C /* MyStaticLib.swift in Sources */,
+				E825826423CCB2C60096AF1C /* UsedClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E825826123CCB2610096AF1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E825825A23CCB1FE0096AF1C /* MyStaticLib */;
+			targetProxy = E825826023CCB2610096AF1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E825824223CCB0BA0096AF1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E825824323CCB0BA0096AF1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E825824523CCB0BA0096AF1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4GXF3JAMM4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E825824623CCB0BA0096AF1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4GXF3JAMM4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E825825D23CCB1FE0096AF1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4GXF3JAMM4;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E825825E23CCB1FE0096AF1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4GXF3JAMM4;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E825823823CCB0BA0096AF1C /* Build configuration list for PBXProject "TestStaticSwiftLinking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E825824223CCB0BA0096AF1C /* Debug */,
+				E825824323CCB0BA0096AF1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E825824423CCB0BA0096AF1C /* Build configuration list for PBXNativeTarget "TestStaticSwiftLinking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E825824523CCB0BA0096AF1C /* Debug */,
+				E825824623CCB0BA0096AF1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E825825C23CCB1FE0096AF1C /* Build configuration list for PBXNativeTarget "MyStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E825825D23CCB1FE0096AF1C /* Debug */,
+				E825825E23CCB1FE0096AF1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E825823523CCB0BA0096AF1C /* Project object */;
+}
